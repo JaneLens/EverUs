@@ -14,7 +14,7 @@ $this->need('public/include.php');
                 <hgroup class="category-info">
                     <div class="category-title">
                         <h3 class="category-heading line-clamp"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a>	</h3>
-                        <a href="<?php $this->permalink() ?>" class="category-link">Unfold Our Story</a>
+                        <a href="<?php $this->permalink() ?>" class="category-link">Unfold My Story</a>
                     </div>
                 </hgroup>
             </li>
