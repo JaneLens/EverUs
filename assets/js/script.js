@@ -261,29 +261,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     initFancybox();
     
-    // 文章头部幻灯片
-    function initPostImages() {
-        $('.images-grid').not('.slick-initialized').each(function () {
-            $(this).slick({
-                dots: false,
-                slidesToShow: 2,
-                slidesToScroll: 1,
-                autoplay: true,
-                arrows: false,
-                autoplaySpeed: 2000,
-            });
-        });
-        /* 自定义上一页 / 下一页按钮 */
-        $('.postimages-prev').on('click', function () {
-            $('.images-grid').slick('slickPrev');
-        });
-        $('.postimages-next').on('click', function () {
-            $('.images-grid').slick('slickNext');
-        });
-    }
-
-    initPostImages();
-    
     // 每次内容替换（前进 / 后退 / 刷新）后重播动画
     swup.hooks.on('content:replace', () => {
         setTimeout(() => {
@@ -294,7 +271,6 @@ document.addEventListener('DOMContentLoaded', function () {
             bindReplyEvents();
             initCarousel();
             initFancybox();
-            initPostImages();
         }, 100); // 延迟 100ms 确保 DOM 元素已经加载完成
     });
 });
